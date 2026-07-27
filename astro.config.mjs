@@ -4,6 +4,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://your-domain.com", // 👈 Replace with your actual domain after deployment
+	site: "https://www.smartphotosbackup.com",
 	integrations: [sitemap()],
 });
