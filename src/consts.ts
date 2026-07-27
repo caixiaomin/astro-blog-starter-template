@@ -11,6 +11,6 @@ export const SITE_DESCRIPTION = "A powerful tool that helps to backup photos to 
 // Navigation menu
 export const NAV_ITEMS = [
 	{ label: "Home", href: "/" },
-	{ label: "Guide", href: "/guide/" },
+	// { label: "Guide", href: "/guide/" }, // Temporarily hidden
 	{ label: "About", href: "/about/" },
 ];
