@@ -1,0 +1,165 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Privacy Policy" description="Privacy Policy and User Data Protection Statement">
+
+	<h1>Privacy Policy</h1>
+	<p class="update-date">Last updated: July 26, 2026</p>
+
+	<!-- ==========================================
+	🔏 Privacy Policy — The following is a general template. Please modify it to fit your actual product.
+	========================================== -->
+
+	<section>
+		<h2>1. Introduction</h2>
+		<p>
+			We ("we", "us", or "the Product") recognize the importance of personal information to you and will take appropriate security measures in accordance with applicable laws and regulations to protect your personal information.
+			This Privacy Policy explains how we collect, use, store, and share your personal information, and how you can manage such information.
+		</p>
+	</section>
+
+	<section>
+		<h2>2. Information We Collect</h2>
+		<p>In the course of using our product, we may collect the following types of information:</p>
+		<ul>
+			<!-- 👇 Modify the data types collected based on your actual product -->
+			<li>
+				<strong>Account Information:</strong>
+				When you register an account, we may collect your username, email address, and similar information.
+			</li>
+			<li>
+				<strong>Usage Data:</strong>
+				We may automatically collect information about how you use the product, including access times, features used, operation logs, etc.
+			</li>
+			<li>
+				<strong>Device Information:</strong>
+				We may collect device model, operating system version, unique device identifiers, and similar information.
+			</li>
+			<li>
+				<strong>Content You Provide:</strong>
+				When you create, upload, or share content using the product, we may need to collect such content to provide our services.
+			</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>3. How We Use Information</h2>
+		<p>The information we collect will be used for the following purposes:</p>
+		<ul>
+			<li>Providing, maintaining, and improving our product and services.</li>
+			<li>Processing your registration, login, and account management.</li>
+			<li>Sending you service-related notifications (such as updates, security alerts, etc.).</li>
+			<li>Analyzing and researching usage trends to improve user experience.</li>
+			<li>Detecting, preventing, and resolving technical issues or abuse.</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>4. Data Storage and Security</h2>
+		<p>
+			We adopt industry-standard security measures to protect your personal information from unauthorized access, disclosure, use, modification, damage, or loss.
+			While we strive to protect your personal information, please note that no security measure is absolutely secure.
+		</p>
+		<p>
+			We retain your personal information only for as long as necessary to fulfill the purposes described in this policy, unless a longer retention period is required or permitted by law.
+		</p>
+	</section>
+
+	<section>
+		<h2>5. Information Sharing and Disclosure</h2>
+		<p>We do not sell your personal information to third parties. We share your information only in the following circumstances:</p>
+		<ul>
+			<li><strong>With your explicit consent.</strong></li>
+			<li><strong>With our service providers:</strong> To implement specific functionalities (such as cloud storage or data analytics), we may share necessary information with our partners.</li>
+			<li><strong>Legal requirements:</strong> Disclosure required by laws, regulations, judicial proceedings, or government requests.</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>6. Your Rights</h2>
+		<p>
+			Under applicable data protection laws, you may have the following rights:
+		</p>
+		<ul>
+			<li><strong>Right of Access:</strong> You may request access to the personal information we hold about you.</li>
+			<li><strong>Right to Rectification:</strong> You may request correction of inaccurate or incomplete personal information.</li>
+			<li><strong>Right to Erasure:</strong> In certain circumstances, you may request deletion of your personal information.</li>
+			<li><strong>Right to Withdraw Consent:</strong> You may withdraw your consent to data processing at any time.</li>
+		</ul>
+		<p>
+			To exercise these rights, please contact us at <a href="mailto:your@email.com">your@email.com</a>.
+		</p>
+	</section>
+
+	<section>
+		<h2>7. Third-Party Services</h2>
+		<p>
+			The product may contain links to third-party websites or services. We assume no responsibility for third-party privacy practices,
+			and we recommend that you review the privacy policies of the relevant third parties.
+		</p>
+	</section>
+
+	<section>
+		<h2>8. Children's Privacy</h2>
+		<p>
+			This product is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13.
+			If we become aware that such information has been collected, we will delete it promptly.
+		</p>
+	</section>
+
+	<section>
+		<h2>9. Updates to This Policy</h2>
+		<p>
+			We may update this Privacy Policy from time to time. The updated version will be published on this page,
+			and material changes will be communicated to you through appropriate means (such as in-app notifications or email).
+			Please check this page periodically for the latest version.
+		</p>
+	</section>
+
+	<section>
+		<h2>10. Contact Us</h2>
+		<p>
+			If you have any questions, comments, or complaints about this Privacy Policy, please contact us through the following channels:
+		</p>
+		<ul class="contact-info">
+			<li>📧 Email: <a href="mailto:your@email.com">your@email.com</a></li>
+			<!-- 👇 Add more contact methods -->
+		</ul>
+	</section>
+
+</BaseLayout>
+
+<style>
+	.update-date {
+		color: rgb(var(--gray));
+		font-size: 0.9rem;
+		margin-bottom: 2em;
+	}
+	section {
+		margin-bottom: 2.5em;
+	}
+	section h2 {
+		text-align: left;
+		font-size: 1.3rem;
+		margin-bottom: 0.5em;
+	}
+	section h2::after {
+		display: none;
+	}
+	section p,
+	section li {
+		color: rgb(var(--gray-dark));
+		line-height: 1.8;
+	}
+	section ul {
+		padding-left: 1.5em;
+	}
+	section li {
+		margin-bottom: 0.5em;
+	}
+	.contact-info {
+		list-style: none;
+		padding: 0;
+	}
+</style>

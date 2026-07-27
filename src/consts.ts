@@ -1,5 +1,16 @@
-// Place any global data in this file.
-// You can import this data from anywhere in your site by using the `import` keyword.
+// ============================================
+// Global configuration: update your product info here
+// ============================================
 
-export const SITE_TITLE = "Astro Blog";
-export const SITE_DESCRIPTION = "Welcome to my website!";
+// Product / Site name
+export const SITE_TITLE = "Smart Photos Backup";
+
+// Site description (for SEO, appears in search engine results)
+export const SITE_DESCRIPTION = "A powerful tool that helps to backup photos to an external drive to save disk space, quickly browse and retrieve, and organize photos by time, place and trip.";
+
+// Navigation menu
+export const NAV_ITEMS = [
+	{ label: "Home", href: "/" },
+	{ label: "Guide", href: "/guide/" },
+	{ label: "About", href: "/about/" },
+];
