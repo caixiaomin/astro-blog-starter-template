@@ -8,6 +8,9 @@ const videos = [
 	{ title: 'Preview Photos', file: 'preview-photos.mp4', width: 540, height: 962 },
 	{ title: 'Select Photos', file: 'select-photos.mp4', width: 540, height: 1168 },
 ];
+
+// Version query to bust browser cache after video re-encoding
+const videoCacheVersion = 'v2';
 ---
 
 <BaseLayout title="Use Cases - Smart Photos Backup" description="Watch how Smart Photos Backup works in real scenarios">
@@ -29,7 +32,7 @@ const videos = [
 						playsinline
 						width={video.width}
 						height={video.height}
-						src={`/videos/${video.file}`}
+						src={`/videos/${video.file}?v=${videoCacheVersion}`}
 					></video>
 				</div>
 			</section>
