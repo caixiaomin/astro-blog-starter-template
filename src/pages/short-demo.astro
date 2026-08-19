@@ -35,6 +35,12 @@ const videoCacheVersion = 'v2';
 		</div>
 
 		<p class="demo-note">
+			<a class="download-btn" href={`/videos/${demo.file}?v=${videoCacheVersion}`} download>
+				Download Video (MP4, 6.2 MB)
+			</a>
+		</p>
+
+		<p class="demo-note">
 			<a href="/">Visit Smart Photos Backup</a> to explore all features.
 		</p>
 	</section>
@@ -83,6 +89,30 @@ const videoCacheVersion = 'v2';
 		margin-top: 2em;
 		font-size: 0.95rem;
 		color: rgb(var(--gray));
+	}
+
+	.download-btn {
+		display: inline-block;
+		padding: 0.7em 1.6em;
+		border-radius: 8px;
+		background: var(--accent);
+		color: #fff;
+		font-weight: 600;
+		font-size: 1rem;
+		text-decoration: none;
+		transition: opacity 0.15s ease;
+	}
+
+	.download-btn:hover {
+		opacity: 0.85;
+	}
+
+	@media (max-width: 768px) {
+		.download-btn {
+			display: block;
+			width: 100%;
+			box-sizing: border-box;
+		}
 	}
 
 	.demo-note a {
