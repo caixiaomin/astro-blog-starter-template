@@ -9,6 +9,8 @@ const videos = [
 	{ title: 'Select Photos', file: 'select-photos.mp4', width: 540, height: 1168 },
 ];
 
+const demo = { title: 'Short Demo', file: 'smart-photos-backup-demo.mp4', width: 540, height: 960 };
+
 // Version query to bust browser cache after video re-encoding
 const videoCacheVersion = 'v2';
 ---
@@ -37,9 +39,24 @@ const videoCacheVersion = 'v2';
 				</div>
 			</section>
 		))
-	}
+		}
 
-</BaseLayout>
+		<section class="use-case" id="short-demo">
+			<h2>{demo.title}</h2>
+			<div class="video-frame">
+				<video
+					class="demo-video"
+					controls
+					preload="none"
+					playsinline
+					width={demo.width}
+					height={demo.height}
+					src={`/videos/${demo.file}?v=${videoCacheVersion}`}
+				></video>
+			</div>
+		</section>
+
+		</BaseLayout>
 
 <script>
 	const videos = document.querySelectorAll<HTMLVideoElement>('video.demo-video');
