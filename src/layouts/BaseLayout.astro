@@ -7,9 +7,11 @@ interface Props {
 	title: string;
 	description: string;
 	image?: string;
+	/** Hide header/footer for standalone pages (e.g. short-demo) */
+	hideChrome?: boolean;
 }
 
-const { title, description, image } = Astro.props;
+const { title, description, image, hideChrome = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -26,10 +28,10 @@ const { title, description, image } = Astro.props;
 		</style>
 	</head>
 	<body>
-		<Header />
+		{!hideChrome && <Header />}
 		<main>
 			<slot />
 		</main>
-		<Footer />
+		{!hideChrome && <Footer />}
 	</body>
 </html>

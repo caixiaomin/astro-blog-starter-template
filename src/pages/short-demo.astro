@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const demo = {
+	title: 'Short Demo',
+	file: 'smart-photos-backup-demo.mp4',
+	width: 540,
+	height: 960,
+};
+
+// Version query to bust browser cache after video re-encoding
+const videoCacheVersion = 'v2';
+---
+
+<BaseLayout
+	title="Short Demo - Smart Photos Backup"
+	description="Watch the Smart Photos Backup short demo video."
+	hideChrome
+>
+	<section class="demo-page">
+		<h1>Short Demo</h1>
+		<p class="demo-intro">See how Smart Photos Backup works in under 90 seconds.</p>
+
+		<div class="video-frame">
+			<video
+				controls
+				preload="none"
+				playsinline
+				autoplay
+				muted
+				width={demo.width}
+				height={demo.height}
+				src={`/videos/${demo.file}?v=${videoCacheVersion}`}
+			></video>
+		</div>
+
+		<p class="demo-note">
+			<a href="/">Visit Smart Photos Backup</a> to explore all features.
+		</p>
+	</section>
+</BaseLayout>
+
+<style>
+	.demo-page {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding-top: 1em;
+	}
+
+	.demo-page h1 {
+		font-size: 2rem;
+		margin-bottom: 0.4em;
+	}
+
+	.demo-intro {
+		font-size: 1.05rem;
+		color: rgb(var(--gray));
+		margin-bottom: 2em;
+	}
+
+	.video-frame {
+		position: relative;
+		border-radius: 14px;
+		overflow: hidden;
+		box-shadow: var(--box-shadow);
+		border: 1px solid rgb(var(--gray-light));
+		background: #000;
+		max-width: 480px;
+		width: 100%;
+	}
+
+	.video-frame video {
+		display: block;
+		width: 100%;
+		height: auto;
+		background: #000;
+		object-fit: contain;
+	}
+
+	.demo-note {
+		margin-top: 2em;
+		font-size: 0.95rem;
+		color: rgb(var(--gray));
+	}
+
+	.demo-note a {
+		color: var(--accent);
+		text-decoration: underline;
+	}
+
+	@media (max-width: 768px) {
+		.demo-page h1 {
+			font-size: 1.5rem;
+		}
+	}
+</style>
