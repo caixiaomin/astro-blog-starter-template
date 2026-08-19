@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const videos = [
+	{ title: 'Back up Photos', file: 'backup-photos.mp4' },
+	{ title: 'Filter Photos', file: 'filter-photos.mp4' },
+	{ title: 'Create Video', file: 'create-video.mp4' },
+	{ title: 'Preview Photos', file: 'preview-photos.mp4' },
+	{ title: 'Select Photos', file: 'select-photos.mp4' },
+];
+---
+
+<BaseLayout title="Use Cases - Smart Photos Backup" description="Watch how Smart Photos Backup works in real scenarios">
+
+	<h1>Use Cases</h1>
+	<p class="page-intro">
+		Watch short videos below to see how each feature works in practice. Only one video plays at a time — starting another will automatically pause the current one.
+	</p>
+
+	{
+		videos.map((video, index) => (
+			<section class="use-case" id={`use-case-${index + 1}`}>
+				<h2>{video.title}</h2>
+				<div class="video-frame">
+					<video
+						class="demo-video"
+						controls
+						preload="metadata"
+						playsinline
+						poster=""
+						src={`/videos/${video.file}`}
+					></video>
+				</div>
+			</section>
+		))
+	}
+
+</BaseLayout>
+
+<script>
+	const videos = document.querySelectorAll<HTMLVideoElement>('video.demo-video');
+	videos.forEach((video) => {
+		video.addEventListener('play', () => {
+			videos.forEach((other) => {
+				if (other !== video && !other.paused) {
+					other.pause();
+				}
+			});
+		});
+	});
+</script>
+
+<style>
+	.page-intro {
+		font-size: 1.1rem;
+		color: rgb(var(--gray));
+		line-height: 1.6;
+		margin-bottom: 2.5em;
+	}
+
+	.use-case {
+		margin-bottom: 3em;
+	}
+	.use-case h2 {
+		text-align: left;
+		font-size: 1.8rem;
+		margin-bottom: 0.75em;
+	}
+	.use-case h2::after {
+		content: '';
+		display: block;
+		width: 60px;
+		height: 3px;
+		background: var(--accent);
+		margin: 0.35em 0 0;
+		border-radius: 2px;
+	}
+
+	.video-frame {
+		position: relative;
+		border-radius: 14px;
+		overflow: hidden;
+		box-shadow: var(--box-shadow);
+		border: 1px solid rgb(var(--gray-light));
+		background: #000;
+	}
+	.video-frame video {
+		display: block;
+		width: 100%;
+		height: auto;
+		max-height: 70vh;
+		background: #000;
+	}
+
+	@media (max-width: 768px) {
+		.use-case h2 {
+			font-size: 1.4rem;
+		}
+		.page-intro {
+			font-size: 1rem;
+		}
+		.video-frame video {
+			max-height: none;
+		}
+	}
+</style>
